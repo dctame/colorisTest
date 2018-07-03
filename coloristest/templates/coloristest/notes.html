@@ -1,0 +1,19 @@
+<html>
+<head>
+test
+</head>
+<body>
+
+<h1>New Note</h1>
+    <form method="POST" >{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" >Save</button>
+    </form>
+
+{% for post in posts %}
+    <p>{{ post }}<p>
+{% endfor %}
+
+</body>
+</html>
+
